@@ -16,7 +16,7 @@ class UserList extends Component {
 
     fetchUsers = async () => {
         try {
-            const response = await axios.get('https://mehak23.pythonanywhere.com/api/list-app-users/');
+            const response = await axios.get('http://127.0.0.1:8000/api/list-app-users/');
             this.setState({ users: response.data });
         } catch (error) {
             console.error('There was an error fetching the users!', error);
@@ -25,7 +25,7 @@ class UserList extends Component {
 
     handleDelete = async (userEmail) => {
         try {
-            await axios.delete(`https://mehak23.pythonanywhere.com/api/delete-app-user/${userEmail}/`);
+            await axios.delete(`http://127.0.0.1:8000/api/delete-app-user/${userEmail}/`);
             this.fetchUsers();
         } catch (error) {
             console.error('There was an error deleting the user!', error);
@@ -50,7 +50,7 @@ class UserList extends Component {
     handleSave = async () => {
         const { currentUser } = this.state;
         try {
-            await axios.put(`https://mehak23.pythonanywhere.com/api/update-app-user/${currentUser.email}/`, currentUser, {
+            await axios.put(`http://127.0.0.1:8000/api/update-app-user/${currentUser.id}/`, currentUser, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -72,7 +72,7 @@ class UserList extends Component {
                         <span>{user.full_name}</span>
                         <span className="icons">
                             <i className="fas fa-edit edit" onClick={() => this.handleEdit(user)}></i>
-                            <i className="fas fa-trash-alt delete" onClick={() => this.handleDelete(user.email)} ></i>
+                            <i className="fas fa-trash-alt delete" onClick={() => this.handleDelete(user.id)} ></i>
                         </span>
                     </div>
                 ))}

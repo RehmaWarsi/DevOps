@@ -10,9 +10,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="Octocat2.png" className="App-logo" alt="logo" />
         <p>
-          DEVOPS <span className="heart">♥️</span>
+          Group Assignment 
         </p>
         
       </header>

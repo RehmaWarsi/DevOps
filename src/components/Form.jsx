@@ -10,7 +10,7 @@ class Form extends Component {
         this.state = {
             name: '',
             address: '',
-            gender: "male",
+            gender: "Male",
             email: '',
             age: 18,
         }
@@ -35,7 +35,7 @@ class Form extends Component {
             address: address
         };
 
-        axios.post('https://mehak23.pythonanywhere.com/api/create-app-user/', data, {
+        axios.post('http://localhost:8000/api/create-app-user/', data, {
             headers: {
                 'Content-Type': 'application/json'
             }

@@ -1,10 +1,17 @@
+body {
+    background: url('https://coursenewsdaily.com/wp-content/uploads/2021/10/DevOps-FtrImg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px;
-    /* border: 1px solid #ccc; */
     border-radius: 10px;
-    /* background-color: #f9f9f9; */
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form div {
@@ -12,10 +19,10 @@ form div {
 }
 
 label {
+    font-weight: bold;
     display: block;
     margin-bottom: 5px;
-    /* font-weight: bold; */
-    color: white;
+    color: #333;
 }
 
 input[type="text"],
@@ -56,9 +63,9 @@ button:hover {
     max-width: 600px;
     margin: 10px auto;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 10px;
-    background-color: #ccc;
+    background-color: rgb(255, 255, 255);
     text-align: left;
     font-weight: bold;
 }
