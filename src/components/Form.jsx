@@ -35,7 +35,7 @@ class Form extends Component {
             address: address
         };
 
-        axios.post('http://localhost:8000/api/create-app-user/', data, {
+        axios.post('https://rehmawarsi.pythonanywhere.com/api/create-app-user/', data, {
             headers: {
                 'Content-Type': 'application/json'
             }
