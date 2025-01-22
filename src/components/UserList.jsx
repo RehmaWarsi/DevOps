@@ -96,7 +96,7 @@ class UserList extends Component {
                             </label>
                             <label>
                                 Gender:
-                                <select name="gender" value={currentUser.gender} onChange={this.handleChange}>
+                                <select name="gender" defaultValue={currentUser.gender} onChange={this.handleChange}>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
